@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2 style="text-align: center;width: 100%; margin-top: 30px;">All Records</h2>
+        <table class="table table-striped" style="margin-top: 50px;">
+            <thead>
+                <tr>
+                    <th scope="col">Record Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+        <a href="index.html" target="_parent" >
+            <button class="btn btn-danger" style="margin-top: 30px; width: 30%; text-align: center;margin-left: 35%;">
+                Back to Home</button>
+        </a>
+    </div>
+</body>
+<script>
+    var putReqStr = createGETALLRecordRequest("90937610|-31949269042446677|90952743",
+        "Student", "Std-Rel", 1, 100, true, true);
+    jQuery.ajaxSetup({ async: false });
+    var resultObj = executeCommandAtGivenBaseUrl(putReqStr,
+        "http://api.login2explore.com:5577", "/api/irl");
+    var data = JSON.parse(resultObj.data).json_records;
+    jQuery.ajaxSetup({ async: true });
+    const table = document.getElementById('table_body');
+
+    var tableData = data.map((data) => (
+        table.innerHTML += ( `<tr>
+            <th scope="row">${data.rec_no}</th>
+            <td>${data.record && data.record.name}</td>
+            <td>${data.record && data.record.email}</td>
+            <td>${data.record && data.record.phone}</td>
+        </tr>`)
+    ));
+
+
+    
+
+</script>
+
+</html>

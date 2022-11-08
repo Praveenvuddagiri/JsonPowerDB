@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+
+<head>
+    <title>JSON POWER DB</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+</head>
+
+<body>
+    <div class="container" style="text-align:center;">
+        <h2 style="width: 100%;text-align:center;margin-top: 40px; ">Welcome To JSON POWER DB CRUD Operations</h2>
+
+        <div id="list">
+            <ul>
+                <li><a href="insert.html" target="_parent"><button class="btn btn-primary">Insert Data</button></a></li>
+                <li><a href="update.html" target="_parent"><button class="btn btn-warning">Update Data</button></a></li>
+                <li><a href="delete.html" target="_parent"><button class="btn btn-danger">Delete Data</button></a></li>
+                <li><a href="get.html" target="_parent"><button class="btn btn-success">Get All Data</button></a></li>
+                
+            </ul>
+        </div>
+    </div>
+</body>
+
+<style>
+    #list{
+        height: auto;
+        text-align: center;
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    li{
+        padding: 20px 20px;
+        margin: 10px;
+        border: 1px solid ;
+        border-radius: 10px;
+        width: 300px;
+        background-color: rgb(243, 243, 243);
+    }
+    button{
+        font-size: 25px !important;
+    }
+
+</style>
+</html>
