@@ -21,8 +21,16 @@
 - In this project, I had made a Student database on Json power Db and made a HTML page for performing CRUD opertions.
 ### Screenshots:
 
-![Dashboard](https://github.com/BeAgarwal/JsonPowerDB/blob/master/Assets/Screenshots/Dashboard.PNG)
+![Dashboard](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/dashboard.png)
 
-![Index Page](https://github.com/BeAgarwal/JsonPowerDB/blob/master/Assets/Screenshots/Index.PNG)
+![Database Visualize Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/database.png)
 
-![Visualize](https://github.com/BeAgarwal/JsonPowerDB/blob/master/Assets/Screenshots/Server.PNG)
+![Index Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/home_page.png)
+
+![Insert Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/insert_page.png)
+
+![Update Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/update_page.png)
+
+![Delete Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/delete_page.png)
+
+![Get All Page](https://github.com/Praveenvuddagiri/JsonPowerDB/blob/master/Assets/get_all_page.png)
